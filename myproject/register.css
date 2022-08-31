@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+body{
+ background: url("https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&w=1000&q=80");
+ font-family: 'Roboto Slab', serif;
+}
+.backgroundNav{
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 70px;
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+#navbarmenu{
+  padding-left: 20px;
+  position: relative;
+  left: 80px;
+} /* Menú de navegación*/
+#logo{
+  position: relative;
+  left: 400px;
+}
+
+.footer{
+  position: relative;
+  top: 300px;
+  left: 0px;
+  background-color: white;
+}
+#textfooter{
+  color: black;
+  font-size: 10px;
+  width: 100%;
+}/*Footer*/
+
+#registerBox{
+  display: grid;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  top: 150px;
+  left: 350px;
+  width: 300px;
+  border: 2px solid white;
+  border-radius: 20px;
+  height: 420px;
+  background-color: rgb(60, 60, 60, 0.15);
+  animation-name: animacion1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-bottom: 0px;
+  position:relative;
+  top: 20px;
+  animation-name: animacion2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+h3, h2{
+  font-size: 10px;
+}
+
+button{                //no tocare
+  border-radius: 40px;
+}
+
+#button{
+  width: 160px;
+  border-radius: 40px;
+  position: relative;
+  top: 40px;
+  left: 10px;
+  background-color: white;
+  animation-name: animacion3;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animacion1{
+  0%{border: 2px solid rgba(0, 0, 0);}
+  33%{border: 2px solid rgb(0, 114, 249);}
+  66%{border: 2px solid rgb(0, 255, 140);}
+}
+
+@keyframes animacion2{
+  0%{color: rgba(0, 0, 0);}
+  33%{color: rgb(0, 114, 249);}
+  66%{color: rgb(0, 255, 140);}
+}
+
+@keyframes animacion3{
+  0%{background-color: rgba(0, 0, 0);}
+  33%{background-color: rgb(0, 114, 249);}
+  66%{background-color: rgb(0, 255, 140);}
+}
+
+@media (min-width:200px) and  (max-width: 1000px) and (orientation: landscape){
+.backgroundNav{
+  position: absolute;
+  top: 0px;
+}
+}
+
+@media (min-width: 1000px) and  (max-width: 1200px) and (orientation: landscape){
+  .footer{
+    position: absolute;
+    top: 720px;
+    bottom: 0px;
+    left: 0px;
+  }
+  #logo{
+    position: relative;
+    left: 550px;
+  }
+  #registerBox{
+    position: relative;
+    left: 400px;
+  }
+}
+
+@media (min-width: 1200px) and (orientation: landscape){
+  .footer{
+    position: absolute;
+    top: 700px;
+    bottom: 0px;
+  }
+  #logo{
+    position: relative;
+    left: 700px;
+  }
+  #registerBox{
+    position: relative;
+    left: 500px;
+  }
+}
