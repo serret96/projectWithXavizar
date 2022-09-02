@@ -7,12 +7,7 @@
     <link rel="stylesheet" href="register.css">
   </head>
   <body>
-    <?php
-      include_once "conexion.php";
-      $sentencia = $bd -> query("select * from users");
-      $persona = $sentencia->fetchAll(PDO::FETCH_OBJ);
-      print_r($persona);
-    ?>
+
     <section id="navbarContainer">
         <div class="backgroundNav">
           <img id="navbarmenu" src="https://cdn.pixabay.com/photo/2017/06/09/23/22/avatar-2388584_960_720.png">
@@ -23,15 +18,25 @@
         </div>
 
     <section id="registerform">
-      <form method="post" action="index.php">
+      <form method="post" action="register.php">
       <div id="registerBox">
         <div class="BoxTitle"><h1>SING UP</h1></div>
-        <input id="email" type="email" placeholder="Email" required>
-        <input id="password" type="password" placeholder="password" required>
-        <input id="password1" type="password" placeholder="password" required>
-        <input id="username" type="text" name="telephone" placeholder="username" required>
+        <input name="email" id="email" type="email" placeholder="Email" required>
+        <input name="password" id="password" type="password" placeholder="password" required>
+        <input name="password1" id="password1" type="password" placeholder="password" required>
+        <input name="username" id="username" type="text" name="telephone" placeholder="username" required>
         <button type="submit" id="button" class="colorbutton" name="LOG IN"><h2>SING UP</h2></button>
-        <p><a href="index.html"><h3>LOG IN</h3></a></p>
+        <p><a href="index.php"><h3>Log In</h3></a></p>
+        <?php
+          error_reporting(0);
+          require_once "conexion.php";
+          $email = $_POST['email'];
+          $password = $_POST['password'];
+          $username = $_POST['username'];
+
+          $insertar = "INSERT INTO users(email, password, username) VALUES ('$email', '$password', '$username')";
+          $a = mysqli_query($bd, $insertar);
+        ?>
       </div>
       </form>
     </section>

@@ -16,14 +16,34 @@
         </div>
     </section>
     <section>
-      <form method="post">
+      <form method="post" action="index.php">
       <div id="containerBox">
         <div class="BoxTitle"><h1>LOG IN</h1></div>
-        <input id="email" type="email" placeholder="Email" required>
-        <input id="password" type="password" placeholder="password" required>
+        <input name="email" id="email" type="email" placeholder="Email" required>
+        <input name="password" id="password" type="password" placeholder="password" required>
         <button type="submit" id="button" class="colorbutton" name="LOG IN"><h2>LOG IN</h2></button>
         <p class="forgotpassword?"><a class="forgotpassword" href="#">forgot password?</a></p>
-        <p><a href="register.html"><h3>CREATE NEW ACCOUNT</h3></a></p>
+        <p><a href="register.php"><h3>CREATE NEW ACCOUNT</h3></a></p>
+        <?php
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $conect = require_once "conexion.php";
+
+        $consulta = "SELECT * FROM users where email = '$email' and password = '$password'";
+        $resultado = mysqli_query($bd, $consulta);
+
+        $filas = mysqli_num_rows($resultado);
+        session_start();
+
+        if($filas){
+          header("location: home.php");
+        }else{
+          echo ("Usuario o contraseña Incorrectos:");
+        }
+        mysqli_free_result($resultado);
+        mysqli_close($conect);
+          ?>
         </div>
       </form>
     </section>
