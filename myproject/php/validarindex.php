@@ -5,8 +5,8 @@ $password = $_POST['password'];
 
 $conect = require_once "conexion.php";
 
-$consulta = "SELECT * FROM users where email = '$email' and password = '$password'";
-$resultado = mysqli_query($bd, $consulta);
+$sql = "SELECT * FROM users where email = '$email' and password = '$password'";
+$resultado = mysqli_query($bd, $sql);
 
 $filas = mysqli_num_rows($resultado);
 session_start();

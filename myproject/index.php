@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Financial Galaxy</title>
-    <link rel="stylesheet" href="indexcss.css">
+    <link rel="stylesheet" href="styles/indexcss.css">
   </head>
   <body>
     <section id="navbarContainer">
@@ -34,6 +34,7 @@
     <section class="footer">
       <p id="textfooter">El pasaje estándar Lorem Ipsum, usado desde el año 1500. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."El pasaje estándar Lorem Ipsum, usado desde el año 1500.El pasaje estándar Lorem Ipsum, usado desde el año 1500. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."El pasaje estándar Lorem Ipsum, usado desde el año 1500. </p>
     </section>
-    <script src="indexjs.js" type="text/javascript"></script>
+    
+    <script src="js/indexjs.js" type="text/javascript"></script>
   </body>
 </html>

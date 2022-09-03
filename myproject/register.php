@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Financial Galaxy</title>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="styles/register.css">
   </head>
   <body>
     <section id="navbarContainer">
